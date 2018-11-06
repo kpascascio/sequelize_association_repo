@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "./node_modules/.bin/mocha --reporter spec test -w",
+    "test": "set NODE_ENV=test&&mocha --reporter spec test -w &&set NODE_ENV=test",
     "start": "node index.js",
     "dev": "nodemon index.js",
     "dev:test": "set NODE_ENV=test&& nodemon index.js"

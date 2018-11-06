@@ -13,7 +13,8 @@ module.exports = {
     password: process.env.PGPASS,
     database: 'studentprojectdbtest',
     host: 'localhost',
-    dialect: 'postgres'
+    dialect: 'postgres',
+    logging:false
   },
   production: {
     username: process.env,

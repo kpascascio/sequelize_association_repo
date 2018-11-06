@@ -4,6 +4,8 @@ const Project = require('../models').sequelize.model('project');
 const UserProject = require('../models').sequelize.model('UserProject');
 
 router.post('/createuser', (req, res) => {
+    console.log(req.body.name)
+    if(!req.body.name) { return res.status(400).send('Missing fields')}
     User.create({
         name: req.body.name
     }).then(
